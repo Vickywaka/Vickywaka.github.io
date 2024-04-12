@@ -40,7 +40,7 @@
 <script>
 	var no = 0;
 
-	fuction inputNo() {
+	function inputNo() {
 		const x = document.getElementById("form01");
 		var item = x.elements[0].value;
 		no = item;
@@ -56,6 +56,7 @@
 	function stat() {
 		const y = document.getElementById("form02");
 		var sum = 0;
+		var sum01 = 0;
 		var text02 = "";
 		for (i = 0; i < no; i++) {
 			sum += Number(y.elements[i].value);
@@ -63,7 +64,7 @@
 			text02 += "第" + (i + 1) + "個數值為" + y.elements[i].value + "<br>";
 		}
 		text02 += "<h4>平均數= " + sum / no + "<h4>";
-		text02 += "<h4>標準差= " +Math.sqrt((sumo1 -sum * sum / no)/ (no-1))+ "<h4>";
+		text02 += "<h4>標準差= " +Math.sqrt((sum01 -sum * sum / no)/ (no-1))+ "<h4>";
 		document.getElementById("demo02").innerHTML =text02;
 	}
 </script>
